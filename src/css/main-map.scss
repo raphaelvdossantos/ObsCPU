@@ -1,0 +1,34 @@
+$color-map: (
+  "bg": #0eeb6a,
+  "text": #001010,
+  "cursor": #fcba03,
+  "graph-bg": #f7f8fa,
+  "twitter": #1da1f2,
+);
+
+$font-weight-map: (
+  "light": 400,
+  "medium": 500,
+  "bold": 600,
+  "dark": 900,
+);
+
+$font-size-map: (
+  "small": 1vh,
+  "normal": 2vh,
+  "big": 3vh,
+  "huge": 5vh,
+  "xhuge": 7.5vh,
+);
+
+@function color($color-name) {
+  @return map-get($color-map, $color-name);
+}
+
+@function ft-weight($weight) {
+  @return map-get($font-weight-map, $weight);
+}
+
+@function ft-size($size) {
+  @return map-get($font-size-map, $size);
+} ;
