@@ -1,0 +1,162 @@
+@import "./main-map.scss";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;900&display=swap");
+
+html,
+body,
+.app {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Raleway", sans-serif;
+  cursor: none;
+  overflow: hidden;
+}
+
+body {
+  background-color: color(bg);
+}
+
+button {
+  font-family: "Raleway", sans-serif;
+  cursor: none;
+  transition: all 0.3s ease;
+}
+
+.app-cursor {
+  z-index: 1000;
+  border-radius: 100%;
+  background-color: color(cursor);
+  padding: 0.5rem;
+  pointer-events: none;
+  overflow: hidden;
+  position: fixed;
+  mix-blend-mode: difference;
+  transition: transform 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: color(text);
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+li {
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  transition: transform 0.1s linear;
+}
+
+.cls-2 {
+  fill: color(twitter);
+  display: none;
+}
+
+.nav {
+  font-weight: ft-weight(bold);
+  font-size: ft-size(big);
+  width: 100%;
+  display: block;
+  padding: 0 25%;
+
+  ul {
+    width: 50%;
+    display: inline-flex;
+    margin: 2.5vh auto;
+    justify-content: space-evenly;
+  }
+
+  button {
+    border: none;
+    background-color: transparent;
+    font-weight: ft-weight(dark);
+    font-size: ft-size(big);
+  }
+}
+
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .home-nav-container {
+    width: 60%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+
+    ul {
+      width: 60%;
+      display: block;
+      margin-left: 5vw;
+
+      li {
+        display: block;
+        padding: 2vh 3vw;
+        line-height: 5vh;
+
+        button {
+          border: none;
+          background-color: transparent;
+          font-weight: ft-weight(dark);
+          font-size: ft-size(xhuge);
+        }
+
+        button:hover {
+          transform: translate(25%, -25%) scale(4);
+          transition: 1s ease;
+        }
+      }
+    }
+  }
+}
+
+.chart {
+  width: 60%;
+  margin: 13vh auto;
+
+  h1 {
+    font-size: 2.5vh;
+    text-align: center;
+    padding-bottom: 1vh;
+  }
+}
+
+.processors {
+  width: 80%;
+  margin: 10vh auto;
+  box-sizing: border-box;
+
+  h1,
+  p {
+    font-weight: ft-weight(light);
+    font-size: ft-size(normal);
+  }
+
+  img {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    height: 30vh;
+  }
+
+  .processor-container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .processor-info-container {
+    width: 70%;
+  }
+}
