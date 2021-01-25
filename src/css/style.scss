@@ -18,10 +18,19 @@ body {
   background-color: color(bg);
 }
 
+.blackBtn {
+  color: color(text);
+}
+
 button {
   font-family: "Raleway", sans-serif;
   cursor: none;
   transition: all 0.3s ease;
+  color: transparent;
+  -webkit-text-stroke-color: color(text);
+  -webkit-text-stroke-width: 2px;
+  letter-spacing: 0.1vw;
+  text-transform: uppercase;
 }
 
 .app-cursor {
@@ -36,18 +45,11 @@ button {
   transition: transform 0.3s ease;
 }
 
-a {
-  text-decoration: none;
-  color: color(text);
-  padding: 0;
-  border: 0;
-  margin: 0;
-}
-
 ul {
   padding: 0;
   border: 0;
   margin: 0;
+  position: relative;
 }
 
 li {
@@ -56,11 +58,14 @@ li {
   border: 0;
   margin: 0;
   transition: transform 0.1s linear;
+  line-height: 5vh;
 }
 
-.cls-2 {
-  fill: color(twitter);
-  display: none;
+.waves {
+  z-index: -10000;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .nav {
@@ -72,16 +77,23 @@ li {
 
   ul {
     width: 50%;
-    display: inline-flex;
-    margin: 2.5vh auto;
-    justify-content: space-evenly;
+    display: inline-block;
+    margin: 6.5vh auto;
+    justify-content: space-around;
+    position: relative;
+
+    .odd {
+      position: absolute;
+      top: 7vh;
+      margin-right: 25vw;
+    }
   }
 
   button {
     border: none;
     background-color: transparent;
-    font-weight: ft-weight(dark);
-    font-size: ft-size(big);
+    font-weight: ft-weight(bold);
+    font-size: ft-size(xhuge);
   }
 }
 
@@ -93,23 +105,21 @@ li {
   .home-nav-container {
     width: 60%;
     margin: 0;
-    display: flex;
-    align-items: center;
+    position: absolute;
+    bottom: 9vh;
 
     ul {
       width: 60%;
-      display: block;
       margin-left: 5vw;
 
       li {
         display: block;
-        padding: 2vh 3vw;
-        line-height: 5vh;
+        padding: 0vh 3vw;
 
         button {
           border: none;
           background-color: transparent;
-          font-weight: ft-weight(dark);
+          font-weight: ft-weight(bold);
           font-size: ft-size(xhuge);
         }
 
@@ -124,7 +134,7 @@ li {
 
 .chart {
   width: 60%;
-  margin: 13vh auto;
+  margin: 10vh auto;
 
   h1 {
     font-size: 2.5vh;

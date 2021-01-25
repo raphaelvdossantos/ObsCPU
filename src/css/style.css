@@ -13,7 +13,11 @@ body,
 }
 
 body {
-  background-color: #0eeb6a;
+  background-color: #f2f4f3;
+}
+
+.blackBtn {
+  color: #0a0908;
 }
 
 button {
@@ -21,12 +25,17 @@ button {
   cursor: none;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  color: transparent;
+  -webkit-text-stroke-color: #0a0908;
+  -webkit-text-stroke-width: 2px;
+  letter-spacing: 0.1vw;
+  text-transform: uppercase;
 }
 
 .app-cursor {
   z-index: 1000;
   border-radius: 100%;
-  background-color: #fcba03;
+  background-color: #f03a47;
   padding: 0.5rem;
   pointer-events: none;
   overflow: hidden;
@@ -38,18 +47,11 @@ button {
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
-a {
-  text-decoration: none;
-  color: #001010;
-  padding: 0;
-  border: 0;
-  margin: 0;
-}
-
 ul {
   padding: 0;
   border: 0;
   margin: 0;
+  position: relative;
 }
 
 li {
@@ -61,15 +63,18 @@ li {
   transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
   transition: transform 0.1s linear, -webkit-transform 0.1s linear;
+  line-height: 5vh;
 }
 
-.cls-2 {
-  fill: #1da1f2;
-  display: none;
+.waves {
+  z-index: -10000;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .nav {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 3vh;
   width: 100%;
   display: block;
@@ -78,20 +83,24 @@ li {
 
 .nav ul {
   width: 50%;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin: 2.5vh auto;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  display: inline-block;
+  margin: 6.5vh auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+}
+
+.nav ul .odd {
+  position: absolute;
+  top: 7vh;
+  margin-right: 25vw;
 }
 
 .nav button {
   border: none;
   background-color: transparent;
-  font-weight: 900;
-  font-size: 3vh;
+  font-weight: 700;
+  font-size: 8.3vh;
 }
 
 .home-container {
@@ -107,31 +116,25 @@ li {
 .home-container .home-nav-container {
   width: 60%;
   margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  position: absolute;
+  bottom: 9vh;
 }
 
 .home-container .home-nav-container ul {
   width: 60%;
-  display: block;
   margin-left: 5vw;
 }
 
 .home-container .home-nav-container ul li {
   display: block;
-  padding: 2vh 3vw;
-  line-height: 5vh;
+  padding: 0vh 3vw;
 }
 
 .home-container .home-nav-container ul li button {
   border: none;
   background-color: transparent;
-  font-weight: 900;
-  font-size: 7.5vh;
+  font-weight: 700;
+  font-size: 8.3vh;
 }
 
 .home-container .home-nav-container ul li button:hover {
@@ -143,7 +146,7 @@ li {
 
 .chart {
   width: 60%;
-  margin: 13vh auto;
+  margin: 10vh auto;
 }
 
 .chart h1 {

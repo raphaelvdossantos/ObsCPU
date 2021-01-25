@@ -1,27 +1,23 @@
-import React, { Component } from "react";
+import React from "react";
 import NavItem from "./navItem";
+import "../../css/style.css";
 
-class NavComponent extends Component {
-  state = {
-    navItems: [
-      { id: 0, value: "Início", url: "/" },
-      { id: 1, value: "Gráficos", url: "/graphs" },
-      { id: 2, value: "Processadores", url: "/processors" },
-      { id: 3, value: "Twitter", url: "/twitter" },
-    ],
-  };
+function NavComponent(props) {
+  const { navItems, nav } = props;
 
-  render() {
-    return (
-      <nav className="nav">
-        <ul>
-          {this.state.navItems.map((item) => (
-            <NavItem key={item.id} value={item.value} url={item.url} />
-          ))}
-        </ul>
-      </nav>
-    );
+  if (!navItems) {
+    return <nav />;
   }
+
+  return (
+    <nav className={nav.className} key={nav.id}>
+      <ul>
+        {navItems.map((item) => {
+          return <NavItem key={item.id} {...item} />;
+        })}
+      </ul>
+    </nav>
+  );
 }
 
 export default NavComponent;

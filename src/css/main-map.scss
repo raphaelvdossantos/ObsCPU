@@ -1,7 +1,7 @@
 $color-map: (
-  "bg": #0eeb6a,
-  "text": #001010,
-  "cursor": #fcba03,
+  "bg": #f2f4f3,
+  "text": #0a0908,
+  "cursor": #f03a47,
   "graph-bg": #f7f8fa,
   "twitter": #1da1f2,
 );
@@ -9,7 +9,7 @@ $color-map: (
 $font-weight-map: (
   "light": 400,
   "medium": 500,
-  "bold": 600,
+  "bold": 700,
   "dark": 900,
 );
 
@@ -18,7 +18,7 @@ $font-size-map: (
   "normal": 2vh,
   "big": 3vh,
   "huge": 5vh,
-  "xhuge": 7.5vh,
+  "xhuge": 8.3vh,
 );
 
 @function color($color-name) {

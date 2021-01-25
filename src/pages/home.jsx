@@ -1,16 +1,53 @@
-import React from "react";
-import HomeNav from "../components/navigation/homeNavComponent";
-import TwitterSVG from "./pageElements/twitterLogo";
+import React, { Component } from "react";
+import HomeNav from "../components/navigation/navComponent";
+import WaveSVG from "./pageElements/soudwaveSVG";
 import "../css/style.css";
 
-function Home() {
-  return (
-    <div className="home-container">
-      <HomeNav />
-      <div></div>
-      <TwitterSVG />
-    </div>
-  );
+class Home extends Component {
+  state = {
+    navItems: [
+      {
+        id: 0,
+        value: "Início",
+        url: "/",
+        navClass: "hover-this homenav",
+        pageIndex: 0,
+      },
+      {
+        id: 1,
+        value: "Gráficos",
+        url: "/graphs",
+        navClass: "hover-this homenav",
+        pageIndex: 0,
+      },
+      {
+        id: 2,
+        value: "Processadores",
+        url: "/processors",
+        navClass: "hover-this homenav",
+        pageIndex: 0,
+      },
+      {
+        id: 3,
+        value: "Twitter",
+        url: "/twitter",
+        navClass: "hover-this homenav",
+        pageIndex: 0,
+      },
+    ],
+    nav: { id: 0, className: "home-nav" },
+  };
+
+  render() {
+    return (
+      <div className="home-container">
+        <div className="home-nav-container">
+          <HomeNav {...this.state} />
+        </div>
+        <WaveSVG />
+      </div>
+    );
+  }
 }
 
 export default Home;
