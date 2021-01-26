@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import HomeNav from "../components/navigation/navComponent";
 import WaveSVG from "./pageElements/soudwaveSVG";
+import Logo from "../components/logo/logoComponent";
 import "../css/style.css";
 
 class Home extends Component {
@@ -36,11 +37,13 @@ class Home extends Component {
       },
     ],
     nav: { id: 0, className: "home-nav" },
+    logoState: { logo: { className: "logoBlock" } },
   };
 
   render() {
     return (
       <div className="home-container">
+        <Logo {...this.state.logoState} />
         <div className="home-nav-container">
           <HomeNav {...this.state} />
         </div>

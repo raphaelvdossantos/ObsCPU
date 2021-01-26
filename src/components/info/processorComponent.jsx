@@ -9,7 +9,7 @@ function ProcessorListComponent(props) {
   }
 
   return (
-    <div className="processors">
+    <div className="processors" key={"processorList"}>
       {items.map((element) => {
         return <ProcessorItem key={element.id} processor={element} />;
       })}

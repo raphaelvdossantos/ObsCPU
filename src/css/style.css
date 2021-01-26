@@ -27,7 +27,7 @@ button {
   transition: all 0.3s ease;
   color: transparent;
   -webkit-text-stroke-color: #0a0908;
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 1.3px;
   letter-spacing: 0.1vw;
   text-transform: uppercase;
 }
@@ -66,6 +66,38 @@ li {
   line-height: 5vh;
 }
 
+.logoBlock {
+  cursor: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: fixed;
+  top: 5vh;
+  left: 9.5rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.logo-dark {
+  color: #0a0908;
+  font-size: 2.5vh;
+}
+
+.logo {
+  color: transparent;
+  font-size: 2.5vh;
+  -webkit-text-stroke-color: #0a0908;
+  -webkit-text-stroke-width: 1px;
+}
+
+.skewed {
+  top: initial;
+  bottom: 15vh;
+  left: 4rem;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
 .waves {
   z-index: -10000;
   position: absolute;
@@ -74,33 +106,46 @@ li {
 }
 
 .nav {
-  font-weight: 700;
-  font-size: 3vh;
   width: 100%;
   display: block;
-  padding: 0 25%;
+  padding: 0 20%;
+  margin-top: 4vh;
 }
 
 .nav ul {
-  width: 50%;
-  display: inline-block;
-  margin: 6.5vh auto;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 60%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: relative;
-}
-
-.nav ul .odd {
-  position: absolute;
-  top: 7vh;
-  margin-right: 25vw;
 }
 
 .nav button {
   border: none;
   background-color: transparent;
   font-weight: 700;
-  font-size: 8.3vh;
+  font-size: 7.5vh;
+}
+
+.odd-nav {
+  margin: 0;
+  padding: 0;
+}
+
+.odd-nav ul {
+  margin-left: 8vw;
+  width: 70%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .home-container {
@@ -146,7 +191,7 @@ li {
 
 .chart {
   width: 60%;
-  margin: 10vh auto;
+  margin: 8vh auto;
 }
 
 .chart h1 {
@@ -157,7 +202,7 @@ li {
 
 .processors {
   width: 80%;
-  margin: 10vh auto;
+  margin: 8vh auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -165,14 +210,14 @@ li {
 .processors h1,
 .processors p {
   font-weight: 400;
-  font-size: 2vh;
+  font-size: 2.5vh;
 }
 
 .processors img {
   margin: 0;
   border: 0;
   padding: 0;
-  height: 30vh;
+  height: 25vh;
 }
 
 .processors .processor-container {

@@ -1,20 +1,15 @@
 import React, { useRef } from "react";
-import { Link } from "react-router-dom";
 import "../../css/style.css";
 
-function NavItem(props) {
-  const { url, value, id, navClass, pageIndex } = props;
+function Logo(props) {
+  const { logo } = props;
   const buttonRef = useRef(null);
-
-  const isSelectedPage = () => {
-    return id === pageIndex ? " blackBtn" : "";
-  };
 
   const handleMouseOver = (e) => {
     const { offsetX: x, offsetY: y } = e.nativeEvent;
     const { offsetWidth: width, offsetHeight: height } = buttonRef.current;
     const cursor = document.querySelector(".app-cursor");
-    const move = pageIndex === 0 ? 15 : 5;
+    const move = 5;
 
     let xMove = (x / width) * (move * 2) - move;
     let yMove = (y / height) * (move * 2) - move;
@@ -29,27 +24,29 @@ function NavItem(props) {
     cursor.style.transform = "";
   };
 
-  let btnClassName = navClass + isSelectedPage();
+  if (!logo) {
+    return <div />;
+  }
 
   return (
-    <li>
-      <Link to={url}>
-        <button
-          key={id}
-          ref={buttonRef}
-          className={btnClassName}
-          onMouseOver={(e) => {
-            handleMouseOver(e);
-          }}
-          onMouseOut={(e) => {
-            handleMouseLeave(e);
-          }}
-        >
-          {value}
-        </button>
-      </Link>
-    </li>
+    <ul
+      className={logo.className}
+      ref={buttonRef}
+      onMouseOver={(e) => {
+        handleMouseOver(e);
+      }}
+      onMouseOut={(e) => {
+        handleMouseLeave(e);
+      }}
+    >
+      <li>
+        <h1 className="logo-dark">Observatório da</h1>
+      </li>
+      <li>
+        <h1 className="logo">CPU</h1>
+      </li>
+    </ul>
   );
 }
 
-export default NavItem;
+export default Logo;
